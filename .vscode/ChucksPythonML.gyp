@@ -1,3 +1,5 @@
+#https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
 # Load libraries
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
@@ -38,5 +40,17 @@ from sklearn.svm import SVC
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
+
+# shape
+print(dataset.shape)
+
+# head
+print(dataset.head(20))
+
+# descriptions
+print(dataset.describe())
+
+# class distribution
+print(dataset.groupby('class').size())
 
 print()
